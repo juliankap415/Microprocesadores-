@@ -1,48 +1,49 @@
 #include <stdio.h>
 #include "calculadora.h"
 
-int a,b,op;
+int a,b,op,r;
 
 int main (void)
 {
 
-printf("Ingrese los números que desea operar (con comas):\n ");
+printf("Ingrese los numeros que desea operar (con comas):\n ");
 scanf("%d,%d", &a,&b);
 
-printf("Qué operación desea realizar \n1-Suma\n2-Resta\n3-Multiplicación\n4-División");
+printf("Que operacion desea realizar \n1-Suma\n2-Resta\n3-Multiplicacion\n4-Division\n");
 scanf("%d",&op);
 
 switch(op)
 
 {
 
-case 1: 
+case 1:
 
-sum(a,b);
-
-break;
-
-case 2: 
-
-res(a,b);
+r=sum(a,b);
 
 break;
 
-case 3: 
+case 2:
 
-mult(a,b);
+r=res(a,b);
+
+break;
+
+case 3:
+
+r=mult(a,b);
 
 break;
 
 
-case 4: 
+case 4:
 
-div(a,b);
+r=div(a,b);
 
 break;
 
 }
 
+printf(" Su resultado es %d", r);
 return 0;
 
 }
